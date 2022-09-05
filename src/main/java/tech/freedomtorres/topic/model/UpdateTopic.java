@@ -1,26 +1,15 @@
-package tech.freedomtorres.topic.models;
+package tech.freedomtorres.topic.model;
 
-public class Topic {
-
-    private int id;
+public class UpdateTopic {
     private String name;
     private String description;
 
-    public Topic() {
+    public UpdateTopic() {
     }
 
-    public Topic(int id, String name, String description) {
-        this.id = id;
+    public UpdateTopic(String name, String description) {
         this.name = name;
         this.description = description;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
