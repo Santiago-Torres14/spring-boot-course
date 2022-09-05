@@ -38,11 +38,11 @@ public class TopicService {
     public Topic updateTopic(int id, UpdateTopic topic) throws NoSuchElementException {
         Topic updatedTopic = topics.stream().filter(t -> t.getId() == id).findFirst().orElseThrow();
 
-        if(!topic.getDescription().isBlank()) {
+        if(topic.getDescription() != null && !topic.getDescription().isBlank()) {
             updatedTopic.setDescription(topic.getDescription());
         }
 
-        if(!topic.getName().isBlank()) {
+        if(topic.getName() != null && !topic.getName().isBlank()) {
             updatedTopic.setName(topic.getName());
         }
 
